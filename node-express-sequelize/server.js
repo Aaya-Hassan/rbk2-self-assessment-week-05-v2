@@ -12,8 +12,7 @@ var User = sequelize.define('User', {
 
 app.get('users',function(req,res){
 	User.findAll().then(function(users){
-	 console.log(users)
-		res.render(users)
+	 console.log(JSON.stringify(users))
 	})
 })
 
